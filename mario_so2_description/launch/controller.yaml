@@ -1,0 +1,181 @@
+#mario_so2_controller:
+  # Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+#==================================================================================================================================
+# Trajectory controllers [position_controllers/JointTrajectoryController] 
+#   
+#   - The joints in the Trajectory controllers must be defined in a single arm group.
+#
+# (comment this section, if switching to position_controllers/JointPositionController)
+#==================================================================================================================================
+
+arm1_joint_trajectory_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_01_joint_06
+      - arm_01_joint_05
+      - arm_01_joint_04
+      - arm_01_joint_03
+      - arm_01_joint_02
+      - arm_01_joint_01
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  constraints:
+      goal_time: 300.0
+      stopped_velocity_tolerance: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_01_joint_06: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_01_joint_05: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_01_joint_04: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_01_joint_03: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_01_joint_02: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_01_joint_01: {p: 1000.0, i: 0.01, d: 10.0}
+
+arm2_joint_trajectory_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_02_joint_06
+      - arm_02_joint_05
+      - arm_02_joint_04
+      - arm_02_joint_03
+      - arm_02_joint_02
+      - arm_02_joint_01
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  constraints:
+      goal_time: 300.0
+      stopped_velocity_tolerance: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_02_joint_06: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_02_joint_05: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_02_joint_04: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_02_joint_03: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_02_joint_02: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_02_joint_01: {p: 1000.0, i: 0.01, d: 10.0}
+
+arm3_joint_trajectory_controller:
+  type: position_controllers/JointTrajectoryController
+  joints: 
+      - arm_03_joint_06
+      - arm_03_joint_05
+      - arm_03_joint_04
+      - arm_03_joint_03
+      - arm_03_joint_02
+      - arm_03_joint_01
+  pid: {p: 100.0, i: 0.01, d: 10.0}
+  constraints:
+      goal_time: 300.0
+      stopped_velocity_tolerance: 0.5
+  state_publish_rate:  25
+  action_monitor_rate: 25
+  gains:
+        arm_03_joint_06: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_03_joint_05: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_03_joint_04: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_03_joint_03: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_03_joint_02: {p: 1000.0, i: 0.01, d: 10.0}
+        arm_03_joint_01: {p: 1000.0, i: 0.01, d: 10.0}
+
+
+
+
+
+
+
+
+
+
+
+
+#==================================================================================================================================
+# Position controllers [position_controllers/JointPositionController] 
+#
+#   - All the joints in Position controllers must be defined individually.
+#
+# (comment these, if switching to position_controllers/JointTrajectoryController)
+#==================================================================================================================================
+
+
+
+# arm_01_joint_01_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_01
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_01_joint_02_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_02
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_01_joint_03_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_03
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_01_joint_04_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_04
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_01_joint_05_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_05
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_01_joint_06_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_01_joint_06
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+
+# arm_02_joint_01_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_01
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_02_joint_02_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_02
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_02_joint_03_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_03
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_02_joint_04_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_04
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_02_joint_05_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_05
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_02_joint_06_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_02_joint_06
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+
+
+# arm_03_joint_01_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_01
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_03_joint_02_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_02
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_03_joint_03_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_03
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_03_joint_04_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_04
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_03_joint_05_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_05
+#   pid: {p: 100.0, i: 0.01, d: 10.0}
+# arm_03_joint_06_position_controller:
+#   type: position_controllers/JointPositionController
+#   joint: arm_03_joint_06
+#   pid: {p: 100.0, i: 0.01, d: 10.0}

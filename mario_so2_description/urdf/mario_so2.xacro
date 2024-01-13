@@ -1,0 +1,722 @@
+<?xml version="1.0" ?>
+<robot name="mario_so2" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mario_so2_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mario_so2_description)/urdf/mario_so2.trans" />
+<xacro:include filename="$(find mario_so2_description)/urdf/mario_so2.gazebo" />
+
+
+
+<link name="dummy_link">
+  <visual>
+    <!-- <geometry>
+      <sphere radius="0.1"/>
+    </geometry>   -->
+  </visual>
+  <collision>
+    <geometry>
+      <cylinder radius="0.1" length="0.05"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.0010000000000137455 0.595339900070785 1.460901992118656" rpy="0 0 0"/>
+    <mass value="13.472578526765847"/>
+    <inertia ixx="0.568265" iyy="0.36191" izz="0.36191" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+
+
+<joint name="dummy_joint" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
+  <parent link="dummy_link"/>
+  <child link="base_link"/>
+</joint>
+
+
+<link name="arm_01_dock_1" self_collide ="false">
+  <inertial>
+    <origin xyz="4.130804489454218e-05 -9.994297911486427e-08 0.01137523033735599" rpy="0 0 0"/>
+    <mass value="0.08663474027437225"/>
+    <inertia ixx="3.1e-05" iyy="3e-05" izz="5.2e-05" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59634 -2.902983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59634 -2.902983" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_06_1">
+  <inertial>
+    <origin xyz="2.2254116952002967e-14 -9.992921334855964e-08 0.03075011594588606" rpy="0 0 0"/>
+    <mass value="0.512001062718799"/>
+    <inertia ixx="0.000481" iyy="0.000481" izz="0.00064" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59634 -2.841483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59634 -2.841483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_05_1">
+  <inertial>
+    <origin xyz="2.1614654510671016e-14 0.016214762343154 0.03500374657024796" rpy="0 0 0"/>
+    <mass value="0.6881071421127011"/>
+    <inertia ixx="0.001936" iyy="0.002005" izz="0.000767" ixy="-0.0" iyz="0.000344" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59634 -2.735583" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59634 -2.735583" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_04_1">
+  <inertial>
+    <origin xyz="1.51766521821414e-05 -0.01610484198962192 0.07035754068605904" rpy="0 0 0"/>
+    <mass value="0.7020791981272467"/>
+    <inertia ixx="0.001945" iyy="0.002018" izz="0.000767" ixy="0.0" iyz="0.000346" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59634 -2.629683" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59634 -2.629683" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_03_1">
+  <inertial>
+    <origin xyz="2.021126321860578e-14 0.021007460364998343 0.08504656118811038" rpy="0 0 0"/>
+    <mass value="0.997405593886483"/>
+    <inertia ixx="0.008723" iyy="0.008725" izz="0.001152" ixy="-0.0" iyz="0.00095" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.58994 -2.421283" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.58994 -2.421283" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_02_1">
+  <inertial>
+    <origin xyz="1.8630496451121914e-14 -0.03418881162303633 0.20500011594588496" rpy="0 0 0"/>
+    <mass value="1.9698176425610354"/>
+    <inertia ixx="0.049229" iyy="0.050345" izz="0.001889" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.58994 -2.011283" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.58994 -2.011283" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_01_1">
+  <inertial>
+    <origin xyz="6.394930572714216e-09 0.013243404228856392 0.0817063972213945" rpy="0 0 0"/>
+    <mass value="0.770115514016459"/>
+    <inertia ixx="0.002717" iyy="0.002827" izz="0.000757" ixy="0.0" iyz="-0.000327" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59534 -1.882883" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59534 -1.882883" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_01_link_00_1">
+  <inertial>
+    <origin xyz="1.6445395392694628e-14 -9.992921468082727e-08 0.0782001159458845" rpy="0 0 0"/>
+    <mass value="1.302064491206825"/>
+    <inertia ixx="0.003468" iyy="0.003468" izz="0.001628" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.59534 -1.726483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.59534 -1.726483" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_01_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_dock_1" self_collide ="false">
+  <inertial>
+    <origin xyz="-2.9186704699881715e-05 -2.91810067366062e-05 -0.011374866043244669" rpy="0 0 0"/>
+    <mass value="0.08663439746489035"/>
+    <inertia ixx="3e-05" iyy="3e-05" izz="5.2e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.0 -0.3372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.0 -0.3372" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_06_1">
+  <inertial>
+    <origin xyz="-9.774125953043723e-16 -3.552713678800501e-16 -0.030749839251724587" rpy="0 0 0"/>
+    <mass value="0.5120010627188"/>
+    <inertia ixx="0.000481" iyy="0.000481" izz="0.00064" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 -0.0 -0.3987" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 -0.0 -0.3987" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_05_1">
+  <inertial>
+    <origin xyz="-0.01621486220125651 2.3092638912203257e-16 -0.035003456293430824" rpy="0 0 0"/>
+    <mass value="0.6881065314959495"/>
+    <inertia ixx="0.002005" iyy="0.001936" izz="0.000767" ixy="0.0" iyz="0.0" ixz="0.000344"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.0 -0.5046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.0 -0.5046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_04_1">
+  <inertial>
+    <origin xyz="0.016104633335673482 0.012202219627462504 -0.0692910057608298" rpy="0 0 0"/>
+    <mass value="0.7020704942394854"/>
+    <inertia ixx="0.002018" iyy="0.00191" izz="0.000803" ixy="-6e-05" iyz="0.000202" ixz="0.00034"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.018389 -0.608891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.018389 -0.608891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_03_1">
+  <inertial>
+    <origin xyz="-0.021007560363107122 0.014768538004174867 -0.08375416118603274" rpy="0 0 0"/>
+    <mass value="0.9974055974174101"/>
+    <inertia ixx="0.008725" iyy="0.008495" izz="0.00138" ixy="-0.000165" iyz="0.001295" ixz="0.000936"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0064 0.054578 -0.814125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0064 0.054578 -0.814125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_02_1">
+  <inertial>
+    <origin xyz="0.03418871169382718 -0.08663687858386163 -0.18579266613748313" rpy="0 0 0"/>
+    <mass value="1.969817642560595"/>
+    <inertia ixx="0.050345" iyy="0.040774" izz="0.010344" ixy="-0.0" iyz="-0.018132" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0064 -0.118696 -1.185711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0064 -0.118696 -1.185711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_01_1">
+  <inertial>
+    <origin xyz="-0.013243511469972165 -0.07076019143894366 -0.040852712236645106" rpy="0 0 0"/>
+    <mass value="0.7701153946406074"/>
+    <inertia ixx="0.002827" iyy="0.001247" izz="0.002227" ixy="-0.000283" iyz="-0.000849" ixz="-0.000163"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.229894 -1.249911" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.229894 -1.249911" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_02_link_00_1">
+  <inertial>
+    <origin xyz="1.1613756831230226e-14 -0.06772328650515863 -0.03909956979495832" rpy="0 0 0"/>
+    <mass value="1.3020644912068255"/>
+    <inertia ixx="0.003468" iyy="0.002088" izz="0.003008" ixy="-0.0" iyz="-0.000797" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.36534 -1.328111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.36534 -1.328111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_02_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_dock_1" self_collide ="false">
+  <inertial>
+    <origin xyz="-0.5963108374408784 0.23717058925821155 -0.4222969464714996" rpy="0 0 0"/>
+    <mass value="0.08663484175253014"/>
+    <inertia ixx="3e-05" iyy="3e-05" izz="5.2e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.59634 -0.95348 -0.748122" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.59634 -0.95348 -0.748122" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_dock_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_06_1">
+  <inertial>
+    <origin xyz="5.191125307391076e-15 -1.9985843469072506e-07 -0.030749839251732247" rpy="0 0 0"/>
+    <mass value="0.5120010627187991"/>
+    <inertia ixx="0.000481" iyy="0.000481" izz="0.00064" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -1.19068 -0.3987" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -1.19068 -0.3987" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_06_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_05_1">
+  <inertial>
+    <origin xyz="-0.016214862201250943 -1.9985843402459125e-07 -0.03500345629344043" rpy="0 0 0"/>
+    <mass value="0.6881065314959485"/>
+    <inertia ixx="0.002005" iyy="0.001936" izz="0.000767" ixy="-0.0" iyz="-0.0" ixz="0.000344"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -1.19068 -0.5046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -1.19068 -0.5046" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_05_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_04_1">
+  <inertial>
+    <origin xyz="0.016104631094472653 -0.012232223653998897 -0.06928575048186703" rpy="0 0 0"/>
+    <mass value="0.702070494239485"/>
+    <inertia ixx="0.002018" iyy="0.00191" izz="0.000802" ixy="6e-05" iyz="-0.000201" ixz="0.00034"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -1.209069 -0.608891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -1.209069 -0.608891" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_04_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_03_1">
+  <inertial>
+    <origin xyz="-0.021007560363102123 -0.01476773786261476 -0.08375416118603773" rpy="0 0 0"/>
+    <mass value="0.9974055974174089"/>
+    <inertia ixx="0.008725" iyy="0.008495" izz="0.00138" ixy="0.000165" iyz="-0.001295" ixz="0.000936"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0064 -1.245257 -0.814125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0064 -1.245257 -0.814125" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_03_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_02_1">
+  <inertial>
+    <origin xyz="0.03418871169383212 0.08663667872544156 -0.18579266613747902" rpy="0 0 0"/>
+    <mass value="1.9698176425605938"/>
+    <inertia ixx="0.050345" iyy="0.040774" izz="0.010344" ixy="-0.0" iyz="0.018132" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0064 -1.071984 -1.185711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0064 -1.071984 -1.185711" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_02_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_01_1">
+  <inertial>
+    <origin xyz="-0.013243511469967075 0.07075999158050561 -0.04085271223664955" rpy="0 0 0"/>
+    <mass value="0.7701153946406073"/>
+    <inertia ixx="0.002827" iyy="0.001247" izz="0.002227" ixy="0.000283" iyz="0.000849" ixz="-0.000163"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.960786 -1.249911" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.960786 -1.249911" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_01_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="arm_03_link_00_1">
+  <inertial>
+    <origin xyz="1.2324126094642729e-14 0.06772308664672821 -0.03909956979495921" rpy="0 0 0"/>
+    <mass value="1.302064491206825"/>
+    <inertia ixx="0.003468" iyy="0.002088" izz="0.003008" ixy="-0.0" iyz="0.000797" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.001 -0.82534 -1.328111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.001 -0.82534 -1.328111" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mario_so2_description/meshes/arm_03_link_00_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="arm_01_dock" type="fixed" self_collide ="false">
+  <origin xyz="0.0 0.0 0.0615" rpy="0 0 0"/>
+  <parent link="arm_01_link_06_1"/>
+  <child link="arm_01_dock_1"/>
+</joint>
+
+<joint name="arm_01_joint_06" type="continuous">
+  <origin xyz="0.0 0.0 0.1059" rpy="0 0 0"/>
+  <parent link="arm_01_link_05_1"/>
+  <child link="arm_01_link_06_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="arm_01_joint_05" type="continuous">
+  <origin xyz="0.0 0.0 0.1059" rpy="0 0 0"/>
+  <parent link="arm_01_link_04_1"/>
+  <child link="arm_01_link_05_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="arm_01_joint_04" type="continuous">
+  <origin xyz="0.0 0.0064 0.2084" rpy="0 0 0"/>
+  <parent link="arm_01_link_03_1"/>
+  <child link="arm_01_link_04_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="arm_01_joint_03" type="continuous">
+  <origin xyz="0.0 0.0 0.41" rpy="0 0 0"/>
+  <parent link="arm_01_link_02_1"/>
+  <child link="arm_01_link_03_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="arm_01_joint_02" type="continuous">
+  <origin xyz="0.0 -0.0054 0.1284" rpy="0 0 0"/>
+  <parent link="arm_01_link_01_1"/>
+  <child link="arm_01_link_02_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="arm_01_joint_01" type="continuous">
+  <origin xyz="0.0 0.0 0.1564" rpy="0 0 0"/>
+  <parent link="arm_01_link_00_1"/>
+  <child link="arm_01_link_01_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="arm_01_joint_base" type="fixed">
+  <origin xyz="0.001 0.59534 1.726483" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_01_link_00_1"/>
+</joint>
+
+<joint name="arm_02_dock" type="fixed" self_collide ="false">
+  <origin xyz="0.0 -0.0 -0.0615" rpy="0 0 0"/>
+  <parent link="arm_02_link_06_1"/>
+  <child link="arm_02_dock_1"/>
+</joint>
+
+<joint name="arm_02_joint_06" type="continuous">
+  <origin xyz="-0.0 0.0 -0.1059" rpy="0 0 0"/>
+  <parent link="arm_02_link_05_1"/>
+  <child link="arm_02_link_06_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="arm_02_joint_05" type="continuous">
+  <origin xyz="0.0 0.018389 -0.104291" rpy="0 0 0"/>
+  <parent link="arm_02_link_04_1"/>
+  <child link="arm_02_link_05_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="arm_02_joint_04" type="continuous">
+  <origin xyz="-0.0064 0.036189 -0.205234" rpy="0 0 0"/>
+  <parent link="arm_02_link_03_1"/>
+  <child link="arm_02_link_04_1"/>
+  <axis xyz="-0.0 0.173648 -0.984808"/>
+</joint>
+
+<joint name="arm_02_joint_03" type="continuous">
+  <origin xyz="0.0 -0.173274 -0.371586" rpy="0 0 0"/>
+  <parent link="arm_02_link_02_1"/>
+  <child link="arm_02_link_03_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="arm_02_joint_02" type="continuous">
+  <origin xyz="0.0054 -0.111198 -0.0642" rpy="0 0 0"/>
+  <parent link="arm_02_link_01_1"/>
+  <child link="arm_02_link_02_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+<joint name="arm_02_joint_01" type="continuous">
+  <origin xyz="0.0 -0.135446 -0.0782" rpy="0 0 0"/>
+  <parent link="arm_02_link_00_1"/>
+  <child link="arm_02_link_01_1"/>
+  <axis xyz="-0.0 -0.866025 -0.5"/>
+</joint>
+
+<joint name="arm_02_joint_base" type="fixed">
+  <origin xyz="0.001 0.36534 1.328111" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_02_link_00_1"/>
+</joint>
+
+<joint name="arm_03_dock" type="fixed" self_collide ="false">
+  <origin xyz="0.59634 -0.2372 0.349422" rpy="0 0 0"/>
+  <parent link="arm_03_link_06_1"/>
+  <child link="arm_03_dock_1"/>
+</joint>
+
+<joint name="arm_03_joint_06" type="continuous">
+  <origin xyz="0.0 0.0 -0.1059" rpy="0 0 0"/>
+  <parent link="arm_03_link_05_1"/>
+  <child link="arm_03_link_06_1"/>
+  <axis xyz="-0.0 -0.0 -1.0"/>
+</joint>
+
+<joint name="arm_03_joint_05" type="continuous">
+  <origin xyz="0.0 -0.018389 -0.104291" rpy="0 0 0"/>
+  <parent link="arm_03_link_04_1"/>
+  <child link="arm_03_link_05_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="arm_03_joint_04" type="continuous">
+  <origin xyz="-0.0064 -0.036188 -0.205234" rpy="0 0 0"/>
+  <parent link="arm_03_link_03_1"/>
+  <child link="arm_03_link_04_1"/>
+  <axis xyz="-0.0 -0.173648 -0.984808"/>
+</joint>
+
+<joint name="arm_03_joint_03" type="continuous">
+  <origin xyz="0.0 0.173273 -0.371586" rpy="0 0 0"/>
+  <parent link="arm_03_link_02_1"/>
+  <child link="arm_03_link_03_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="arm_03_joint_02" type="continuous">
+  <origin xyz="0.0054 0.111198 -0.0642" rpy="0 0 0"/>
+  <parent link="arm_03_link_01_1"/>
+  <child link="arm_03_link_02_1"/>
+  <axis xyz="-1.0 -0.0 0.0"/>
+</joint>
+
+<joint name="arm_03_joint_01" type="continuous">
+  <origin xyz="0.0 0.135446 -0.0782" rpy="0 0 0"/>
+  <parent link="arm_03_link_00_1"/>
+  <child link="arm_03_link_01_1"/>
+  <axis xyz="-0.0 0.866025 -0.5"/>
+</joint>
+
+<joint name="arm_03_joint_base" type="fixed">
+  <origin xyz="0.001 0.82534 1.328111" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="arm_03_link_00_1"/>
+</joint>
+
+</robot>

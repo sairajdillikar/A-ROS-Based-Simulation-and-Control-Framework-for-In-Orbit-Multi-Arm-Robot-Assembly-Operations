@@ -1,0 +1,9 @@
+<launch>
+
+<rosparam file="$(find mario_so2_description)/launch/controller.yaml" command="load"/>
+<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="mario_so2" args="arm_01_joint_06_position_controller arm_01_joint_05_position_controller arm_01_joint_04_position_controller arm_01_joint_03_position_controller arm_01_joint_02_position_controller arm_01_joint_01_position_controller arm_02_joint_06_position_controller arm_02_joint_05_position_controller arm_02_joint_04_position_controller arm_02_joint_03_position_controller arm_02_joint_02_position_controller arm_02_joint_01_position_controller arm_03_joint_06_position_controller arm_03_joint_05_position_controller arm_03_joint_04_position_controller arm_03_joint_03_position_controller arm_03_joint_02_position_controller arm_03_joint_01_position_controller joint_state_controller "/>
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+  <remap from="/joint_states" to="/mario_so2/joint_states"/>
+</node>
+
+</launch>

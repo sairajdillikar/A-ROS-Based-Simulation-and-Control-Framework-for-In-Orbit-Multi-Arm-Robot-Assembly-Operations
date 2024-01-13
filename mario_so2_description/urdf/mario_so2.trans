@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<robot name="mario_so2" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+<transmission name="arm_01_joint_06_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_06_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_05_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_05_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_04_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_04_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_03_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_03_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_02_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_02_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_01_joint_01_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_01_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_01_joint_01_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_06_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_06_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_05_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_05_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_04_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_04_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_03_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_03_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_02_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_02_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_02_joint_01_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_02_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_02_joint_01_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_06_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_06">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_06_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_05_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_05">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_05_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_04_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_04">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_04_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_03_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_03">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_03_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_02_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_02">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_02_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="arm_03_joint_01_tran">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="arm_03_joint_01">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="arm_03_joint_01_actr">
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+  </actuator>
+</transmission>
+
+</robot>

@@ -1,0 +1,59 @@
+<launch>
+    <arg name="arg_x" default="0.00" />
+    <arg name="arg_y" default="0.00" />
+    <arg name="arg_z" default="0.02" />
+    <arg name="arg_R" default="0.00" />
+    <arg name="arg_P" default="0.00" />
+    <arg name="arg_Y" default="-1.5708" />
+
+    <!--Urdf file path-->
+    <param name="robot_description" command="$(find xacro)/xacro $(find mario_so2_description)/urdf/mario_so2.xacro"/>
+ 
+    <node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link base_footprint 40" />
+    
+
+
+    <!--Load and launch the joint trajectory controller-->
+    <rosparam file="$(find mario_so2_description)/launch/controller.yaml" command="load"/>
+    
+
+<!-- #==================================================================================================================================
+# Trajectory controllers [position_controllers/JointTrajectoryController] 
+#   
+#   - The joints in the Trajectory controllers must be defined in a single arm group.
+#
+# (comment this section, if switching to position_controllers/JointPositionController)
+#================================================================================================================================== -->
+
+    <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="true" output="screen" args="joint_state_controller arm1_joint_trajectory_controller arm2_joint_trajectory_controller arm3_joint_trajectory_controller"/>
+
+
+
+
+<!-- #==================================================================================================================================
+# Position controllers [position_controllers/JointPositionController] 
+#
+#   - All the joints in Position controllers must be defined individually.
+#
+# (comment these, if switching to position_controllers/JointTrajectoryController)
+#================================================================================================================================== -->
+
+    <!-- <node name= "controller_spawner" pkg= "controller_manager" type="spawner" respawn="false" output="screen" args=" joint_state_controller 
+    arm_01_joint_01_position_controller arm_01_joint_02_position_controller arm_01_joint_03_position_controller arm_01_joint_04_position_controller arm_01_joint_05_position_controller arm_01_joint_06_position_controller 
+    arm_02_joint_01_position_controller arm_02_joint_02_position_controller arm_02_joint_03_position_controller arm_02_joint_04_position_controller arm_02_joint_05_position_controller arm_02_joint_06_position_controller 
+    arm_03_joint_01_position_controller arm_03_joint_02_position_controller arm_03_joint_03_position_controller arm_03_joint_04_position_controller arm_03_joint_05_position_controller arm_03_joint_06_position_controller "/> -->
+    
+
+
+
+    <!-- Delay before homing the arm -->
+    <arg name="delay_seconds" default="10"/>
+
+    <!--spawn model-->
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-x $(arg arg_x) -y $(arg arg_y) -z $(arg arg_z) -Y $(arg arg_Y) -P $(arg arg_P) -R $(arg arg_R) -param robot_description -urdf -model mario_so2"/>
+
+
+    <!-- Robot State Publisher for TF of each joint: publishes all the current states of the joint, then RViz can visualize -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen"/>
+
+</launch>
