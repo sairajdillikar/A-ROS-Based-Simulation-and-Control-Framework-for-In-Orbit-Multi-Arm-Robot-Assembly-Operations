@@ -1,0 +1,4 @@
+<launch>
+  <param name="robot_description" command="$(find xacro)/xacro $(find srs_5_singlebody_description)/urdf/srs_5_singlebody.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model srs_5_singlebody"/>
+</launch>
