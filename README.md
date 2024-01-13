@@ -6,7 +6,7 @@ by ***Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United King
 
 The team members include: ***Saksham Bhadani, Irene Cotrina de los Mozos, Omkar N Pradhan (MSc Robotics 2022-23, Cranfield University, United Kingdom)***
 
-Simulation videos of this project can be accessed by clicking [here](http://tinyurl.com/MotionPlanning-MARIO).
+Simulation videos of this project can be accessed by clicking [here](http://tinyurl.com/Assembler-MARIO).
 
 ## Table of Contents
 
