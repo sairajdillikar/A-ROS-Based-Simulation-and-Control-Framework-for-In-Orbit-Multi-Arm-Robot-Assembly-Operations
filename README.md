@@ -66,8 +66,6 @@ Terminal-2:
 
     rosrun moveit_mario_so2 main_execution_sequence.py
 
-![Serial (a) Locomotion](resources/serial_motion_1.gif)
-
 ## Citation
 
 If you use the Motion Planning architecture as part of a publication or utilise in a project development, please use the Bibtex below as a citation,
