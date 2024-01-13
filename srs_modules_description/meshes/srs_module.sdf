@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="srs_module">
+    <static>0</static>
+    <link name="base_link">
+      <inertial>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      
+      <collision name="collision">
+        <pose>0.585 0 3.276589 0 0 0</pose>
+        <!-- <pose>4.0923159 0 2.95549512 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+
+            <!-- Add your PC Username here -->
+            <uri>/home/peraspera/mario_ws/src/srs_modules_description/meshes/base_link.stl</uri>
+            
+          </mesh>
+        </geometry>
+      </collision>
+        
+      <visual name="visual">
+        <pose>0.585 0 3.276589 0 0 0</pose>
+        <!-- <pose>4.0923159 0 2.95549512 0 0 0</pose> -->
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+
+            <!-- Add your PC Username here -->
+            <uri>/home/peraspera/mario_ws/src/srs_modules_description/meshes/base_link.stl</uri>
+
+          </mesh>
+        </geometry>
+
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+        
+    </link>
+  </model>
+</sdf>
