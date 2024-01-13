@@ -2,8 +2,9 @@
 A ROS-Gazebo based simulation showcasing the required in-orbit operation objectives as assembly and locomotion framework for a multi-manipulator system.
 
 Developed as part of MSc Group Design Project titled "A ROS Based Simulation and Control Framework for In-Orbit Multi Arm Robot Assembly Operations" 
-by ***Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)***
-Team members include: ***Saksham Bhadani, Irene Cotrina de los Mozos, Omkar N Pradhan (MSc Robotics 2022-23, Cranfield University, United Kingdom)***
+by ***Sairaj R Dillikar (MSc Robotics 2022-23, Cranfield University, United Kingdom)***.
+
+The team members include: ***Saksham Bhadani, Irene Cotrina de los Mozos, Omkar N Pradhan (MSc Robotics 2022-23, Cranfield University, United Kingdom)***
 
 Simulation videos of this project can be accessed by clicking [here](http://tinyurl.com/MotionPlanning-MARIO).
 
