@@ -75,7 +75,7 @@ If you use the Motion Planning architecture as part of a publication or utilise 
 ### Repository:
 ```bibtex
 @misc{mario_assembler,
-  author       = {Dillikar, Sairaj.R.},
+  author       = {Dillikar, Sairaj.R. and Bhadani, Saksham and Cotrina de los Mozos, Irene and Pradhan, Omkar N and Felicetti, Leonard and Upadhyay, Saurabh and Tang, Gilbert},
   booktitle    = {GitHub repository},
   publisher    = {GitHub},
   title        = {A ROS Based Simulation and Control Framework for In-Orbit Multi Arm Robot Assembly Operations},
