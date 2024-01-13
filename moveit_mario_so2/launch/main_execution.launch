@@ -1,0 +1,21 @@
+<launch>
+    
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+      <arg name="world_name" value="$(find gazebo_ros_link_attacher)/worlds/test_attacher.world"/>
+      <arg name="paused" value="false"/>
+      <arg name="use_sim_time" value="true"/>
+      <arg name="gui" value="true"/>
+      <arg name="headless" value="false"/>
+      <arg name="debug" value="false"/>
+  </include>
+
+  <!-- Launch file to spawn the SRS -->
+  <group ns="robot1">
+    <param name="tf_prefix" value="robot1_tf" />
+    <include file="$(find srs_5_singlebody_description)/launch/gazebo.launch" />
+  </group>
+
+  <!-- Launch file of the MARIO package that includes the move group -->
+  <include file="$(find moveit_mario_so2)/launch/mario_sim.launch" />
+
+</launch>

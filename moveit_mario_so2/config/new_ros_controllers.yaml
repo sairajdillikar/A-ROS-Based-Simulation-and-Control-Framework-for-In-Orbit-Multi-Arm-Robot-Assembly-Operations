@@ -1,0 +1,175 @@
+controller_list:
+
+#==================================================================================================================================
+# Trajectory controllers [position_controllers/JointTrajectoryController] 
+#   
+#   - The joints in the Trajectory controllers must be defined in a single arm group.
+#
+# (comment this section, if switching to position_controllers/JointPositionController)
+#==================================================================================================================================
+
+
+  - name: arm1_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+    - arm_01_joint_06
+    - arm_01_joint_05
+    - arm_01_joint_04
+    - arm_01_joint_03
+    - arm_01_joint_02
+    - arm_01_joint_01
+
+  - name: arm2_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints: 
+    - arm_02_joint_06
+    - arm_02_joint_05
+    - arm_02_joint_04
+    - arm_02_joint_03
+    - arm_02_joint_02
+    - arm_02_joint_01
+
+  - name: arm3_joint_trajectory_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+    - arm_03_joint_06
+    - arm_03_joint_05
+    - arm_03_joint_04
+    - arm_03_joint_03
+    - arm_03_joint_02
+    - arm_03_joint_01
+
+  
+
+
+
+
+
+
+
+#==================================================================================================================================
+# Position controllers [position_controllers/JointPositionController] 
+#
+#   - All the joints in Position controllers must be defined individually.
+#
+# (comment these, if switching to position_controllers/JointTrajectoryController)
+#==================================================================================================================================
+
+
+
+  # - name: arm_01_joint_01_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_01
+    
+  # - name: arm_01_joint_02_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_02
+    
+  # - name: arm_01_joint_03_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_03
+    
+  # - name: arm_01_joint_04_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_04
+    
+  # - name: arm_01_joint_05_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_05
+    
+  # - name: arm_01_joint_06_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_01_joint_06
+    
+    
+  # - name: arm_02_joint_01_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_01
+    
+  # - name: arm_02_joint_02_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_02
+    
+  # - name: arm_02_joint_03_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_03
+    
+  # - name: arm_02_joint_04_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_04
+    
+  # - name: arm_02_joint_05_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_05
+    
+  # - name: arm_02_joint_06_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_02_joint_06
+
+
+  # - name: arm_03_joint_01_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_01
+    
+  # - name: arm_03_joint_02_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_02
+    
+  # - name: arm_03_joint_03_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_03
+    
+  # - name: arm_03_joint_04_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_04
+    
+  # - name: arm_03_joint_05_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_05
+    
+  # - name: arm_03_joint_06_position_controller
+  #   action_ns: follow_joint_trajectory
+  #   type: FollowJointTrajectory
+  #   default: true
+  #   joints: arm_03_joint_06
+
